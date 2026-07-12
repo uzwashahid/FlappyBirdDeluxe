@@ -35,6 +35,7 @@ private:
     sf::Text scoreText;
     sf::Text messageText;
     sf::Text gameOverText;
+ sf::Text finalScoreText;
     sf::Text titleText;
     sf::Text titleText2;
 
