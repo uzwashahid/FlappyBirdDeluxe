@@ -1,4 +1,4 @@
-# Flappy Bird Deluxe
+#Flappy Bird Deluxe
 
 A fully object-oriented recreation of Flappy Bird, built from scratch in **C++** using **SFML 3.1.0**. This project focuses on clean OOP architecture, real-time physics, collision detection, and persistent score tracking — no game engine, no shortcuts, just C++ and a graphics library.
 
