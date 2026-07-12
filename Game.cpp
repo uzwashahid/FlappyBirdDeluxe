@@ -12,6 +12,7 @@ Game::Game()
     titleText2(font),
     messageText(font),
     gameOverText(font),
+    finalScoreText(font),
     flapSound(flapBuffer),
     hitSound(hitBuffer),
     scoreSound(scoreBuffer)
@@ -52,17 +53,21 @@ Game::Game()
     titleText2.setString("Deluxe");
     centerText(titleText2, 480.f, 150.f);
 
-  
     messageText.setCharacterSize(18);
     messageText.setFillColor(sf::Color::White);
     messageText.setString("Press SPACE to start");
     centerText(messageText, 480.f, 360.f);
 
-    
     gameOverText.setCharacterSize(28);
     gameOverText.setFillColor(sf::Color::Red);
     gameOverText.setString("Game Over!");
     centerText(gameOverText, 480.f, 320.f);
+
+    
+    finalScoreText.setCharacterSize(20);
+    finalScoreText.setFillColor(sf::Color::White);
+    finalScoreText.setString("Score: 0");
+    centerText(finalScoreText, 480.f, 360.f);
 
     flapBuffer.loadFromFile("Assets/Sounds/flap.mp3");
     hitBuffer.loadFromFile("Assets/Sounds/hit.mp3");
@@ -139,8 +144,12 @@ void Game::checkCollisions() {
         hitSound.play();
         scoreManager.saveHighScoreIfNeeded();
         state = GameState::GAME_OVER;
+
+        finalScoreText.setString("Score: " + std::to_string(scoreManager.getScore()));
+        centerText(finalScoreText, 480.f, 360.f);
+
         messageText.setString("Press SPACE to retry");
-        centerText(messageText, 480.f, 360.f);
+        centerText(messageText, 480.f, 400.f);
         return;
     }
 
@@ -158,8 +167,12 @@ void Game::checkCollisions() {
             hitSound.play();
             scoreManager.saveHighScoreIfNeeded();
             state = GameState::GAME_OVER;
+
+            finalScoreText.setString("Score: " + std::to_string(scoreManager.getScore()));
+            centerText(finalScoreText, 480.f, 360.f);
+
             messageText.setString("Press SPACE to retry");
-            centerText(messageText, 480.f, 360.f);
+            centerText(messageText, 480.f, 400.f);
         }
 
         if (!pipe.scored && topBounds.position.x + topBounds.size.x < birdBounds.position.x) {
@@ -182,6 +195,7 @@ void Game::render() {
     }
     else if (state == GameState::GAME_OVER) {
         window.draw(gameOverText);
+        window.draw(finalScoreText);
         window.draw(messageText);
     }
     else { // MENU
