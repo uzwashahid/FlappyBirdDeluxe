@@ -1,0 +1,42 @@
+# ===========================
+# Visual Studio
+# ===========================
+
+.vs/
+.vscode/
+
+# Build folders
+Debug/
+Release/
+x64/
+x86/
+
+# Intermediate build files
+*.obj
+*.o
+*.pch
+*.ilk
+*.idb
+*.ipdb
+*.iobj
+*.pdb
+*.tlog
+
+# Visual Studio user files
+*.user
+*.VC.db
+*.VC.opendb
+*.suo
+
+# Executables
+*.exe
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Windows
+Thumbs.db
+Desktop.ini
