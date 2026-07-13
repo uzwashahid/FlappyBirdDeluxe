@@ -1,4 +1,4 @@
-#Flappy Bird Deluxe
+#Flappy Bird Uzwa Edition
 
 A fully object-oriented recreation of Flappy Bird, built from scratch in **C++** using **SFML 3.1.0**. This project focuses on clean OOP architecture, real-time physics, collision detection, and persistent score tracking — no game engine, no shortcuts, just C++ and a graphics library.
 
@@ -6,7 +6,7 @@ A fully object-oriented recreation of Flappy Bird, built from scratch in **C++**
 
 ## Overview
 
-Flappy Bird Deluxe reimplements the classic one-button arcade game with a custom art style, dynamic difficulty scaling, sound effects, and a persistent high score system. The project was built to practice core Object-Oriented Programming principles — composition, encapsulation, and state management — in a real, playable application rather than an abstract exercise.
+Flappy Bird Uzwa Edition reimplements the classic one-button arcade game with a custom art style, dynamic difficulty scaling, sound effects, and a persistent high score system. The project was built to practice core Object-Oriented Programming principles — composition, encapsulation, and state management — in a real, playable application rather than an abstract exercise.
 
 ## Features
 
@@ -53,7 +53,7 @@ Game (state machine & main loop)
 ## Project Structure
 
 ```
-FlappingBirdDeluxe/
+FlappingBirdUzwaEdition/
 ├── Assets/
 │   ├── Textures/     bird.png, pipe.png, background.png
 │   ├── Fonts/        font.ttf
