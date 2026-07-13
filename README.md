@@ -82,7 +82,7 @@ FlappingBirdUzwaEdition/
 ### Build & Run
 1. Clone the repository:
    ```
-   git clone https://github.com/<your-username>/FlappingBirdDeluxe.git
+   git clone https://github.com/<your-username>/FlappingBirdUzwaEdition.git
    ```
 2. Open the solution in Visual Studio.
 3. Ensure the project is set to **x64 / Debug** (or Release) and linked against SFML via vcpkg's manifest mode.
